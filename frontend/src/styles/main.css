@@ -1,0 +1,85 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+  background: #f5f7fa;
+  color: #303133;
+}
+
+.header {
+  height: 56px;
+  background: #1f3864;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  gap: 24px;
+}
+
+.header .logo {
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.header .nav { flex: 1; }
+
+.header .nav a {
+  color: #c9d6ea;
+  text-decoration: none;
+  font-size: 14px;
+  margin-right: 20px;
+}
+
+.header .nav a.router-link-active { color: #fff; font-weight: 600; }
+
+.header .user { font-size: 13px; display: flex; align-items: center; gap: 8px; }
+
+.main {
+  max-width: 1180px;
+  margin: 24px auto;
+  padding: 0 16px 40px;
+}
+
+.page-title { font-size: 20px; font-weight: 600; margin: 0 0 16px; }
+
+.toolbar { display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+
+.center { display: flex; justify-content: center; margin-top: 20px; }
+
+.empty { text-align: center; color: #909399; padding: 40px 0; }
+
+.login-wrap {
+  display: flex; align-items: center; justify-content: center;
+  min-height: calc(100vh - 56px);
+}
+
+.login-card { width: 380px; }
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.project-card {
+  background: #fff; border: 1px solid #ebeef5; border-radius: 8px;
+  padding: 16px; cursor: pointer; transition: box-shadow .2s;
+}
+
+.project-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,.08); }
+
+.project-name { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+
+.text-muted { color: #909399; font-size: 12px; }
+
+.status-tag-pass { color: #2e7d32; }
+.status-tag-fail { color: #c62828; }
+
+pre.snapshot {
+  background: #f6f8fa; border: 1px solid #ebeef5; border-radius: 4px;
+  padding: 8px; font-size: 12px; max-height: 220px; overflow: auto;
+  white-space: pre-wrap; word-break: break-all; margin: 4px 0;
+}
